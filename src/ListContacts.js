@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-function ListContacts (props) {
-  return (
+const ListContacts = (props) => (
     <ol className="contact-list">
       {props.contacts.map(contact =>
         <li key={contact.id} className="contact-list-item">
@@ -19,6 +18,5 @@ function ListContacts (props) {
         )}
     </ol>
   )
-}
 
 export default ListContacts
