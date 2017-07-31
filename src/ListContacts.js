@@ -30,7 +30,7 @@ class ListContacts extends Component {
       const match = new RegExp(escapeRegExp(this.state.query), 'i')
       showingContacts = contacts.filter((contact) => match.test(contact.name))
     } else {
-      showingContacts = this.props.contacts
+      showingContacts = contacts
     }
 
     showingContacts.sort(sortBy('name'))
@@ -64,7 +64,7 @@ class ListContacts extends Component {
                   <p>{contact.name}</p>
                   <p>{contact.email}</p>
                 </div>
-                <button onClick={() => this.props.onDeleteContact(contact)} className='contact-remove'>
+                <button onClick={() => onDeleteContact(contact)} className='contact-remove'>
                   Remove
                 </button>
               </li>
